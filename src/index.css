@@ -12,6 +12,7 @@
     --font-raleway: "Raleway", sans-serif;
 }
 
+
 body {
     font-family: var(--font-roboto);
     background-color: #212426;
@@ -19,11 +20,28 @@ body {
 
 .app {
     padding: 4rem;
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+/***********************************************************************************************************************************
+Dark Mode
+************************************************************************************************************************************/
+
+.theme-toggle {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    color: #271c19;
+    cursor: pointer;
+    background-color: #ffc0ad;
+    padding: .5rem;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
 }
 
 h1 {
@@ -37,6 +55,65 @@ h1 {
     -webkit-text-fill-color: transparent;
     width: fit-content;
 }
+
+/***********************************************************************************************************************************
+Light Mode
+************************************************************************************************************************************/
+
+.light .theme-toggle {
+    background: #271c19;
+    color: #ffc0ad;
+}
+
+.light {
+    background-color: #eff0f3;
+    color: #222;
+}
+
+.light h1 {
+    background: linear-gradient(90deg,
+            rgba(249, 211, 180, 1) 100%,
+            rgba(249, 211, 180, 0) 0%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.light .search {
+    background: #f0f0f0;
+    -webkit-box-shadow: 5px 5px 7px #ddd, -5px -5px 7px #eee;
+    box-shadow: 5px 5px 7px #ddd, -5px -5px 7px #eee;
+}
+
+.light .search input {
+    color: #333;
+    background: #f0f0f0;
+}
+
+.light .empty h2 {
+    color: #333;
+}
+
+.light .movie div:nth-of-type(1) {
+    color: #333;
+}
+
+.light .movie div:nth-of-type(3) {
+    background-color: #f0f0f0;
+}
+
+.light .movie div:nth-of-type(3) span {
+    color: #666;
+}
+
+.light .movie div:nth-of-type(3) h3 {
+    color: #222;
+}
+
+
+/***********************************************************************************************************************************
+Search
+************************************************************************************************************************************/
 
 .search {
     width: 71%;
@@ -71,21 +148,6 @@ h1 {
     height: 35px;
     cursor: pointer;
 }
-
-/* .search button {
-  padding: 20px 40px;
-  border-radius: 0.5rem;
-  margin-left: 15px;
-  color: #a1a1a1;
-  font-family: var(--font-raleway);
-  font-weight: 900;
-  letter-spacing: 0.75px;
-  font-size: 1.25rem;
-  cursor: pointer;
-  background: #1f2123;
-  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-} */
 
 .empty {
     width: 100%;
