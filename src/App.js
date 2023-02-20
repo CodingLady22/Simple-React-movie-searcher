@@ -1,28 +1,25 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import SearchIcon from "./search.svg";
+import ThemeToggle from "./ThemeToggle";
 import MovieCard from "./MovieCard";
 
-// Api key - 214c8bdb
-//  http://www.omdbapi.com/?i=tt3896198&apikey=214c8bdb
 
 const API_URL = `http://www.omdbapi.com?apikey=214c8bdb`;
-
-const movie1 = {
-    "Title": "Batman v Superman: Dawn of Justice",
-    "Year": "2016",
-    "imdbID": "tt2975590",
-    "Type": "movie",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
-}
 
 const App = () => {
 
     const [ movies, setMovies ] = useState([]);
     const [ searchTerm, setSearchTerm ] = useState('');
 
+    const [theme, setTheme] = useState("light");
+
+      const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
     const searchMovies = async (title) => {
-        const res = await fetch(`${API_URL}&s=${title}`); // calls API
+        const res = await fetch(`${API_URL}&s=${title}`);
         const data = await res.json();
 
         setMovies(data.Search);
@@ -35,14 +32,20 @@ const App = () => {
     
 
     return (
-        <div className="app">
+        <div className={`app ${theme}`}>
+            < ThemeToggle theme={theme} toggleTheme={toggleTheme} />
             <h1>MoviePlanet</h1>
 
             <div className="search">
                 <input 
                 placeholder="Search for movies"   
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}     
+                onChange={(e) => setSearchTerm(e.target.value)}  
+                onKeyDown={(e) => {
+                    if (e.keyCode === 13) {
+                    searchMovies(searchTerm);
+                    }
+                }}   
                 />
                 <img 
                 src={SearchIcon} 
