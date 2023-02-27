@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.73acc211.css",
-    "main.js": "/react-gh-pages/static/js/main.1367d925.js",
-    "index.html": "/react-gh-pages/index.html",
-    "static/media/search.svg": "/react-gh-pages/static/media/search.cb6c592234d8208dcbe994788ebadb76.svg",
-    "main.73acc211.css.map": "/react-gh-pages/static/css/main.73acc211.css.map",
-    "main.1367d925.js.map": "/react-gh-pages/static/js/main.1367d925.js.map"
+    "main.css": "/Simple-React-movie-searcher/static/css/main.73acc211.css",
+    "main.js": "/Simple-React-movie-searcher/static/js/main.8bd88ec9.js",
+    "index.html": "/Simple-React-movie-searcher/index.html",
+    "static/media/search.svg": "/Simple-React-movie-searcher/static/media/search.cb6c592234d8208dcbe994788ebadb76.svg",
+    "main.73acc211.css.map": "/Simple-React-movie-searcher/static/css/main.73acc211.css.map",
+    "main.8bd88ec9.js.map": "/Simple-React-movie-searcher/static/js/main.8bd88ec9.js.map"
   },
   "entrypoints": [
     "static/css/main.73acc211.css",
-    "static/js/main.1367d925.js"
+    "static/js/main.8bd88ec9.js"
   ]
 }
