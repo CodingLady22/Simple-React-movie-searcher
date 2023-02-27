@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 import MovieCard from "./MovieCard";
 
 
-const API_URL = `http://www.omdbapi.com?apikey=214c8bdb`;
+const API_URL = `https://www.omdbapi.com?apikey=214c8bdb`;
 
 const App = () => {
 
