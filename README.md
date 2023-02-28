@@ -2,6 +2,7 @@
 This is a an app built using React to find information of movies by entering the name of the movie in the search bar.
 
 ## How it was made
+* CSS
 * REACT
 
 ### Live site
